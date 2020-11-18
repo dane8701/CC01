@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +47,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmStudentEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmStudentEdit.Designer.cs">
+      <DependentUpon>FrmStudentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStudentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudentList.Designer.cs">
+      <DependentUpon>FrmStudentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUniversityEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUniversityEdit.Designer.cs">
+      <DependentUpon>FrmUniversityEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUniversityList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUniversityList.Designer.cs">
+      <DependentUpon>FrmUniversityList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_Parent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Parent.Designer.cs">
+      <DependentUpon>_Parent.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmStudentEdit.resx">
+      <DependentUpon>FrmStudentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudentList.resx">
+      <DependentUpon>FrmStudentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUniversityEdit.resx">
+      <DependentUpon>FrmUniversityEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUniversityList.resx">
+      <DependentUpon>FrmUniversityList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +100,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentListRpt.rdlc" />
+    <EmbeddedResource Include="_Parent.resx">
+      <DependentUpon>_Parent.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
