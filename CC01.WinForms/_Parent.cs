@@ -21,5 +21,11 @@ namespace CC01.WinForms
         {
 
         }
+
+        private void createToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
