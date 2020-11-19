@@ -8,9 +8,9 @@ namespace CC01.BO
 {
     public class University
     {
-        public string Nomuniversity;
+        public string UniversityName;
 
-        public string Born;
+        public DateTime Born;
 
         public string Lieu;
 
@@ -18,16 +18,20 @@ namespace CC01.BO
 
         public byte[] Logo;
 
-        public string Reference;
+        public int Reference;
 
-        public University(string nomuniversity, string born, string lieu, string contact, byte[] logo, string reference)
+        public University(string universityName, DateTime born, string lieu, string contact, byte[] logo, int reference)
         {
-            Nomuniversity = nomuniversity;
+            UniversityName = universityName;
             Born = born;
             Lieu = lieu;
             Contact = contact;
             Logo = logo;
             Reference = reference;
+        }
+
+        public University()
+        {
         }
 
         public override bool Equals(object obj)
@@ -38,7 +42,7 @@ namespace CC01.BO
 
         public override int GetHashCode()
         {
-            return -1304721846 + EqualityComparer<string>.Default.GetHashCode(Reference);
+            return -1304721846 + Reference.GetHashCode();
         }
     }
 }

@@ -14,27 +14,27 @@ namespace CC01.BO
 
         public string Lastname;
 
-        public string Born;
+        public DateTime Born;
 
-        public string At;
+        public string LocationStudent;
 
         public string Contact;
 
         public byte[] picture;
 
-        public string Reference;
+        public int Reference;
 
         public Student()//serialisation
         {
         }
 
-        public Student(string university, string firstname, string lastname, string born, string at, string contact, byte[] picture, string reference)
+        public Student(string university, string firstname, string lastname, DateTime born, string locationStudent, string contact, byte[] picture, int reference)
         {
             University = university;
             Firstname = firstname;
             Lastname = lastname;
             Born = born;
-            At = at;
+            LocationStudent = locationStudent;
             Contact = contact;
             this.picture = picture;
             Reference = reference;
@@ -48,7 +48,7 @@ namespace CC01.BO
 
         public override int GetHashCode()
         {
-            return -1304721846 + EqualityComparer<string>.Default.GetHashCode(Reference);
+            return -1304721846 + Reference.GetHashCode();
         }
     }
 }
