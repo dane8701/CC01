@@ -32,7 +32,7 @@
             this.txtLastname = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtFirstname = new System.Windows.Forms.Label();
-            this.txtLieuStudent = new System.Windows.Forms.TextBox();
+            this.txtLocationStudent = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtContactStudent = new System.Windows.Forms.TextBox();
@@ -84,13 +84,13 @@
             this.txtFirstname.TabIndex = 2;
             this.txtFirstname.Text = "Prénom / First name";
             // 
-            // txtLieuStudent
+            // txtLocationStudent
             // 
-            this.txtLieuStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLieuStudent.Location = new System.Drawing.Point(106, 261);
-            this.txtLieuStudent.Name = "txtLieuStudent";
-            this.txtLieuStudent.Size = new System.Drawing.Size(232, 26);
-            this.txtLieuStudent.TabIndex = 4;
+            this.txtLocationStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocationStudent.Location = new System.Drawing.Point(106, 261);
+            this.txtLocationStudent.Name = "txtLocationStudent";
+            this.txtLocationStudent.Size = new System.Drawing.Size(232, 26);
+            this.txtLocationStudent.TabIndex = 4;
             // 
             // label3
             // 
@@ -133,7 +133,7 @@
             // dateTimePickerStudent
             // 
             this.dateTimePickerStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerStudent.Location = new System.Drawing.Point(159, 219);
+            this.dateTimePickerStudent.Location = new System.Drawing.Point(169, 219);
             this.dateTimePickerStudent.Name = "dateTimePickerStudent";
             this.dateTimePickerStudent.Size = new System.Drawing.Size(231, 26);
             this.dateTimePickerStudent.TabIndex = 3;
@@ -213,7 +213,7 @@
             this.Controls.Add(this.txtContactStudent);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtLieuStudent);
+            this.Controls.Add(this.txtLocationStudent);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtFirstname);
@@ -234,7 +234,7 @@
         private System.Windows.Forms.TextBox txtLastname;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label txtFirstname;
-        private System.Windows.Forms.TextBox txtLieuStudent;
+        private System.Windows.Forms.TextBox txtLocationStudent;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtContactStudent;

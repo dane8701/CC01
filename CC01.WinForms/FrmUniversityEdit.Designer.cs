@@ -36,7 +36,7 @@
             this.txtContactUniversity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtLieuUniversity = new System.Windows.Forms.TextBox();
+            this.txtLocationUniversity = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUniversityName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -119,13 +119,13 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Lieu";
             // 
-            // txtLieuUniversity
+            // txtLocationUniversity
             // 
-            this.txtLieuUniversity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLieuUniversity.Location = new System.Drawing.Point(90, 191);
-            this.txtLieuUniversity.Name = "txtLieuUniversity";
-            this.txtLieuUniversity.Size = new System.Drawing.Size(232, 26);
-            this.txtLieuUniversity.TabIndex = 19;
+            this.txtLocationUniversity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocationUniversity.Location = new System.Drawing.Point(90, 191);
+            this.txtLocationUniversity.Name = "txtLocationUniversity";
+            this.txtLocationUniversity.Size = new System.Drawing.Size(232, 26);
+            this.txtLocationUniversity.TabIndex = 19;
             // 
             // label3
             // 
@@ -151,9 +151,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 20);
+            this.label1.Size = new System.Drawing.Size(242, 20);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Nom Université / University name";
+            this.label1.Text = "Nom Université / University Name";
             // 
             // FrmUniversityEdit
             // 
@@ -170,7 +170,7 @@
             this.Controls.Add(this.txtContactUniversity);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtLieuUniversity);
+            this.Controls.Add(this.txtLocationUniversity);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtUniversityName);
             this.Controls.Add(this.label1);
@@ -191,7 +191,7 @@
         private System.Windows.Forms.TextBox txtContactUniversity;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtLieuUniversity;
+        private System.Windows.Forms.TextBox txtLocationUniversity;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUniversityName;
         private System.Windows.Forms.Label label1;
