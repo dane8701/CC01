@@ -61,6 +61,7 @@
             this.pictureBoxUniversity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxUniversity.TabIndex = 26;
             this.pictureBoxUniversity.TabStop = false;
+            this.pictureBoxUniversity.Click += new System.EventHandler(this.pictureBoxUniversity_Click);
             // 
             // btnCancel
             // 
@@ -72,6 +73,7 @@
             this.btnCancel.TabIndex = 22;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -82,6 +84,7 @@
             this.btnSave.TabIndex = 24;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dateTimePickerUniversity
             // 
@@ -176,6 +179,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmUniversityEdit";
             this.Text = "FrmUniversity";
+            this.Load += new System.EventHandler(this.FrmUniversityEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUniversity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

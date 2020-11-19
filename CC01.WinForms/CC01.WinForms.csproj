@@ -49,6 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
@@ -62,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EtudiantCartePrint.cs" />
     <Compile Include="FrmPreview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +127,7 @@
     <EmbeddedResource Include="_Parent.resx">
       <DependentUpon>_Parent.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\EtudiantCartePrint.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -149,6 +152,20 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CC01.BLL\CC01.BLL.csproj">
+      <Project>{71275885-06B6-43A8-AA5F-B97640BC52C3}</Project>
+      <Name>CC01.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CC01.BO\CC01.BO.csproj">
+      <Project>{432FC84C-1C1E-4C11-9526-7BEBE8D22004}</Project>
+      <Name>CC01.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CC01.DAL\CC01.DAL.csproj">
+      <Project>{51499351-8A8B-49FA-AFDF-9F0F1FEF5D1B}</Project>
+      <Name>CC01.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

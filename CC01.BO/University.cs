@@ -10,24 +10,27 @@ namespace CC01.BO
     {
         public string UniversityName;
 
-        public DateTime Born;
+        public string Born;
 
-        public string Lieu;
+        public string Location;
 
-        public string Contact;
+        public long Contact;
 
         public byte[] Logo;
 
-        public int Reference;
+        public string Reference;
 
-        public University(string universityName, DateTime born, string lieu, string contact, byte[] logo, int reference)
+        public int cmp = 0;
+
+        public University(string universityName, string born, string location, long contact, byte[] logo)
         {
             UniversityName = universityName;
             Born = born;
-            Lieu = lieu;
+            Location = location;
             Contact = contact;
             Logo = logo;
-            Reference = reference;
+            cmp++;
+            Reference = "R" + cmp.ToString();
         }
 
         public University()

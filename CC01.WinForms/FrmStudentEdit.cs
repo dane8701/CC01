@@ -1,8 +1,12 @@
-﻿using System;
+﻿using CC01.BLL;
+using CC01.BO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +16,28 @@ namespace CC01.WinForms
 {
     public partial class FrmStudentEdit : Form
     {
+        private Action callBack;
+        private Student oldStudent;
         public FrmStudentEdit()
         {
             InitializeComponent();
+        }
+
+        public FrmStudentEdit(Action callBack) : this()
+        {
+            this.callBack = callBack;
+        }
+
+        public FrmStudentEdit(Student student, Action callBack) : this(callBack)
+        {
+            this.oldStudent = student;
+            txtUniversity.Text = student.University;
+            labelF.Text = student.Firstname;
+            txtLastname.Text = student.Lastname;
+            dateTimePickerStudent.Text = student.Born.ToString();
+            if (student.Picture != null)
+                pictureBoxStudent.Image = Image.FromStream(new MemoryStream(student.Picture));
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -26,6 +49,108 @@ namespace CC01.WinForms
         private void FrmStudentEdit_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Student newStudent = new Student
+                (
+                    txtUniversity.Text.ToUpper(),
+                    txtFirstname.Text,
+                    txtLastname.Text,
+                    dateTimePickerStudent.Value.ToString("MM/DD/YYYY"),
+                    txtLocationStudent.Text,
+                    long.Parse(txtContactStudent.Text),
+                    !string.IsNullOrEmpty(pictureBoxStudent.ImageLocation) ? File.ReadAllBytes(pictureBoxStudent.ImageLocation) : this.oldStudent?.Picture
+                );
+
+                StudentBLO productBLO = new StudentBLO(ConfigurationManager.AppSettings["DbFolder"]);
+
+                if (this.oldStudent == null)
+                    productBLO.CreateStudent(newStudent);
+                else
+                    productBLO.EditStudent(oldStudent, newStudent);
+
+                MessageBox.Show
+                (
+                    "Save done !",
+                    "Confirmation",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+
+                if (callBack != null)
+                    callBack();
+
+                if (oldStudent != null)
+                    Close();
+
+                txtUniversity.Clear();
+                txtLastname.Clear();
+                txtFirstname.Clear();
+                txtContactStudent.Clear();
+                txtLocationStudent.Clear();
+
+            }
+            catch (TypingException ex)
+            {
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Typing error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+            catch (DuplicateNameException ex)
+            {
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Duplicate error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+            catch (KeyNotFoundException ex)
+            {
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Not found error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+            catch (Exception ex)
+            {
+                ex.WriteToFile();
+                MessageBox.Show
+               (
+                   "An error occurred! Please try again later.",
+                   "Erreur",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Error
+               );
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBoxStudent_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Choose a picture";
+            ofd.Filter = "Image files|*.jpg;*.jpeg;*.png;*.gif";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxStudent.ImageLocation = ofd.FileName;
+            }
         }
     }
 }

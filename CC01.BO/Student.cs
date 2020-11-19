@@ -14,21 +14,23 @@ namespace CC01.BO
 
         public string Lastname;
 
-        public DateTime Born;
+        public string Born;
 
         public string LocationStudent;
 
-        public string Contact;
+        public long Contact;
 
-        public byte[] picture;
+        public byte[] Picture;
 
-        public int Reference;
+        public int cmp =  0;
+
+        public string Reference;
 
         public Student()//serialisation
         {
         }
 
-        public Student(string university, string firstname, string lastname, DateTime born, string locationStudent, string contact, byte[] picture, int reference)
+        public Student(string university, string firstname, string lastname, string born, string locationStudent, long contact, byte[] picture)
         {
             University = university;
             Firstname = firstname;
@@ -36,8 +38,9 @@ namespace CC01.BO
             Born = born;
             LocationStudent = locationStudent;
             Contact = contact;
-            this.picture = picture;
-            Reference = reference;
+            Picture = picture;
+            cmp++;
+            Reference = "R" + cmp.ToString();
         }
 
         public override bool Equals(object obj)

@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtLastname = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.txtFirstname = new System.Windows.Forms.Label();
+            this.txtFirstname = new System.Windows.Forms.TextBox();
+            this.labelF = new System.Windows.Forms.Label();
             this.txtLocationStudent = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,23 +66,23 @@
             this.txtLastname.Size = new System.Drawing.Size(233, 26);
             this.txtLastname.TabIndex = 1;
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(32, 176);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 26);
-            this.textBox2.TabIndex = 2;
-            // 
             // txtFirstname
             // 
-            this.txtFirstname.AutoSize = true;
             this.txtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstname.Location = new System.Drawing.Point(27, 153);
+            this.txtFirstname.Location = new System.Drawing.Point(32, 176);
             this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(151, 20);
+            this.txtFirstname.Size = new System.Drawing.Size(233, 26);
             this.txtFirstname.TabIndex = 2;
-            this.txtFirstname.Text = "Prénom / First name";
+            // 
+            // labelF
+            // 
+            this.labelF.AutoSize = true;
+            this.labelF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelF.Location = new System.Drawing.Point(27, 153);
+            this.labelF.Name = "labelF";
+            this.labelF.Size = new System.Drawing.Size(151, 20);
+            this.labelF.TabIndex = 2;
+            this.labelF.Text = "Prénom / First name";
             // 
             // txtLocationStudent
             // 
@@ -147,6 +147,7 @@
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -158,15 +159,19 @@
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // pictureBoxStudent
             // 
+            this.pictureBoxStudent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxStudent.Location = new System.Drawing.Point(318, 42);
             this.pictureBoxStudent.Name = "pictureBoxStudent";
             this.pictureBoxStudent.Size = new System.Drawing.Size(200, 138);
-            this.pictureBoxStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxStudent.TabIndex = 9;
             this.pictureBoxStudent.TabStop = false;
+            this.pictureBoxStudent.Click += new System.EventHandler(this.pictureBoxStudent_Click);
             // 
             // label2
             // 
@@ -215,8 +220,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtLocationStudent);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtFirstname);
+            this.Controls.Add(this.labelF);
             this.Controls.Add(this.txtLastname);
             this.Controls.Add(this.label1);
             this.Name = "FrmStudentEdit";
@@ -232,8 +237,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtLastname;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label txtFirstname;
+        private System.Windows.Forms.TextBox txtFirstname;
+        private System.Windows.Forms.Label labelF;
         private System.Windows.Forms.TextBox txtLocationStudent;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
