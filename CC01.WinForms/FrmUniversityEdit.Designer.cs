@@ -56,6 +56,7 @@
             // pictureBoxUniversity
             // 
             this.pictureBoxUniversity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxUniversity.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxUniversity.Location = new System.Drawing.Point(353, 73);
             this.pictureBoxUniversity.Name = "pictureBoxUniversity";
             this.pictureBoxUniversity.Size = new System.Drawing.Size(200, 138);
