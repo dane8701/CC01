@@ -29,8 +29,9 @@ namespace CC01.WinForms
             var universitys = universityBLO.GetBy
             (
                 x =>
-                x.Reference.ToLower().Contains(value)
-            );
+                x.Reference.Contains(value) ||
+                x.UniversityName.ToLower().Contains(value)
+            ).OrderBy(x => x.Reference).ToArray(); ;
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = universitys;
             dataGridView1.ClearSelection();
@@ -92,6 +93,9 @@ namespace CC01.WinForms
             }
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

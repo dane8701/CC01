@@ -32,12 +32,13 @@ namespace CC01.WinForms
 
         public FrmUniversityEdit(University university, Action callBack) : this(callBack)
         {
+            this.oldUniversity = university;
             txtUniversityName.Text = oldUniversity.UniversityName;
-            dateTimePickerUniversity.Value = DateTime.Parse(oldUniversity.Born);
+            txtDate.Text = oldUniversity.Born;
             txtLocationUniversity.Text = oldUniversity.Location;
             txtContactUniversity.Text = oldUniversity.Contact.ToString();
-            if (university.Logo != null)
-                pictureBoxUniversity.Image = Image.FromStream(new MemoryStream(university.Logo));
+            if (oldUniversity.Logo != null)
+                pictureBoxUniversity.Image = Image.FromStream(new MemoryStream(oldUniversity.Logo));
         }
 
         private void FrmUniversityEdit_Load(object sender, EventArgs e)
@@ -68,7 +69,7 @@ namespace CC01.WinForms
                 University newUniversity = new University
                 (
                     txtUniversityName.Text.ToUpper(),
-                    dateTimePickerUniversity.Value.ToString("MM/DD/YYYY"),
+                    txtDate.Text,
                     txtLocationUniversity.Text,
                     long.Parse(txtContactUniversity.Text),
                     !string.IsNullOrEmpty(pictureBoxUniversity.ImageLocation) ? File.ReadAllBytes(pictureBoxUniversity.ImageLocation) : this.oldUniversity?.Logo

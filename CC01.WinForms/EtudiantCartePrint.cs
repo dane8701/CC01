@@ -14,15 +14,15 @@ namespace CC01.WinForms
 
         public string University { get; set; }
 
-        public string Born;
+        public string Born { get; set; }
 
-        public string Location;
+        public string Location { get; set; }
 
-        public long Contact;
+        public long Contact { get; set; }
 
-        public byte[] Logo;
+        public byte[] Picture { get; set; }
 
-        public EtudiantCartePrint(string university, string born, string location, long contact, byte[] logo)
+        public EtudiantCartePrint(string university, string born, string location, long contact, byte[] picture)
         {
             cmp++;
             Reference = "R" + cmp.ToString();
@@ -30,7 +30,7 @@ namespace CC01.WinForms
             Born = born;
             Location = location;
             Contact = contact;
-            Logo = logo;
+            Picture = picture;
         }
     }
 }

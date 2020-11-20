@@ -37,13 +37,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtContactStudent = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePickerStudent = new System.Windows.Forms.DateTimePicker();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.pictureBoxStudent = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUniversity = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtDate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,14 +130,6 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Contact ";
             // 
-            // dateTimePickerStudent
-            // 
-            this.dateTimePickerStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerStudent.Location = new System.Drawing.Point(169, 219);
-            this.dateTimePickerStudent.Name = "dateTimePickerStudent";
-            this.dateTimePickerStudent.Size = new System.Drawing.Size(231, 26);
-            this.dateTimePickerStudent.TabIndex = 3;
-            // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,6 +193,14 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Université / University ";
             // 
+            // txtDate
+            // 
+            this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDate.Location = new System.Drawing.Point(169, 221);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(169, 26);
+            this.txtDate.TabIndex = 13;
+            // 
             // FrmStudentEdit
             // 
             this.AcceptButton = this.btnSave;
@@ -208,13 +208,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(530, 450);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.txtUniversity);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBoxStudent);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.dateTimePickerStudent);
             this.Controls.Add(this.txtContactStudent);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -244,13 +244,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtContactStudent;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePickerStudent;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.PictureBox pictureBoxStudent;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUniversity;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtDate;
     }
 }
 

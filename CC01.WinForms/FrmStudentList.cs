@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,13 +17,13 @@ namespace CC01.WinForms
     public partial class FrmStudentList : Form
     {
         private StudentBLO studentBLO;
-        private UniversityBLO companyBLO;
+        private UniversityBLO universityBLO;
         public FrmStudentList()
         {
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
             studentBLO = new StudentBLO(ConfigurationManager.AppSettings["DbFolder"]);
-            companyBLO = new UniversityBLO(ConfigurationManager.AppSettings["DbFolder"]);
+            universityBLO = new UniversityBLO(ConfigurationManager.AppSettings["DbFolder"]);
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -85,31 +86,25 @@ namespace CC01.WinForms
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            /*
-            List<StudentListPrint> items = new List<StudentListPrint>();
-            University university = universityBLO.GetUniversity();
+            List<EtudiantCartePrint> items = new List<EtudiantCartePrint>();
+            Student student = studentBLO.GetStudent();
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 Student p = dataGridView1.Rows[i].DataBoundItem as Student;
                 items.Add
                 (
-                   new StudentListPrint
+                   new EtudiantCartePrint
                    (
-                       p.Reference,
-                       p.Name,
-                       p.UnitPrice,
-                       p.Picture,
-                       university?.Name,
-                       university?.Email,
-                       university?.PhoneNumber.ToString(),
-                       university?.PostalCode,
-                       !string.IsNullOrEmpty(university?.Logo) ? File.ReadAllBytes(university?.Logo) : null
+                       p.University,
+                       p.Born,
+                       p.LocationStudent,
+                       p.Contact,
+                       !string.IsNullOrEmpty((student?.Picture).ToString()) ? File.ReadAllBytes((student?.Picture).ToString()) : null
                     )
                 );
             }
-            Form f = new FrmPreview("StudentListRpt.rdlc", items);
-            f.Show();
-            */
+            /*Form f = new FrmPreview("EtudiantCartePrint.rdlc", items);
+            f.Show();*/
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -126,6 +121,16 @@ namespace CC01.WinForms
                     f.ShowDialog();
                 }
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            loadData();
+        }
+
+        private void FrmStudentList_Load(object sender, EventArgs e)
+        {
+            loadData();
         }
     }
 }

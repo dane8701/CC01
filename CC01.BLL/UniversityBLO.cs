@@ -19,28 +19,29 @@ namespace CC01.BLL
             this.dbFolder = dbFolder;
             universityRepo = new UniversityDAO(dbFolder);
         }
+
         /*public void CreateUniversity(University oldUniversity, University newUniversity)
-        {
-            string filename = null;
-            if (!string.IsNullOrEmpty(newUniversity.Logo))
-            {
-                string ext = Path.GetExtension(newUniversity.Logo);
-                filename = Guid.NewGuid().ToString() + ext;
-                FileInfo fileSource = new FileInfo(newUniversity.Logo);
-                string filePath = Path.Combine(dbFolder, "logo", filename);
-                FileInfo fileDest = new FileInfo(filePath);
-                if (!fileDest.Directory.Exists)
-                    fileDest.Directory.Create();
-                fileSource.CopyTo(fileDest.FullName);
-            }
-            newUniversity.Logo = filename;
-            universityRepo.Add(newUniversity);
+{
+   string filename = null;
+   if (!string.IsNullOrEmpty(newUniversity.Logo))
+   {
+       string ext = Path.GetExtension(newUniversity.Logo);
+       filename = Guid.NewGuid().ToString() + ext;
+       FileInfo fileSource = new FileInfo(newUniversity.Logo);
+       string filePath = Path.Combine(dbFolder, "logo", filename);
+       FileInfo fileDest = new FileInfo(filePath);
+       if (!fileDest.Directory.Exists)
+           fileDest.Directory.Create();
+       fileSource.CopyTo(fileDest.FullName);
+   }
+   newUniversity.Logo = filename;
+   universityRepo.Add(newUniversity);
 
-            if (!string.IsNullOrEmpty(oldUniversity.Logo))
-                File.Delete(oldUniversity.Logo);
-        }*/
+   if (!string.IsNullOrEmpty(oldUniversity.Logo))
+       File.Delete(oldUniversity.Logo);
+}*/
 
-        public object GetBy(Func<University, bool> predicate)
+        public IEnumerable<University> GetBy(Func<University, bool> predicate)
         {
             return universityRepo.Find(predicate);
         }

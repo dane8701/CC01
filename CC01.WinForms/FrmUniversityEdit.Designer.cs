@@ -32,7 +32,6 @@
             this.pictureBoxUniversity = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.dateTimePickerUniversity = new System.Windows.Forms.DateTimePicker();
             this.txtContactUniversity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUniversityName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtDate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUniversity)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,10 +55,11 @@
             // 
             // pictureBoxUniversity
             // 
+            this.pictureBoxUniversity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxUniversity.Location = new System.Drawing.Point(353, 73);
             this.pictureBoxUniversity.Name = "pictureBoxUniversity";
             this.pictureBoxUniversity.Size = new System.Drawing.Size(200, 138);
-            this.pictureBoxUniversity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxUniversity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxUniversity.TabIndex = 26;
             this.pictureBoxUniversity.TabStop = false;
             this.pictureBoxUniversity.Click += new System.EventHandler(this.pictureBoxUniversity_Click);
@@ -85,14 +86,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // dateTimePickerUniversity
-            // 
-            this.dateTimePickerUniversity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerUniversity.Location = new System.Drawing.Point(90, 133);
-            this.dateTimePickerUniversity.Name = "dateTimePickerUniversity";
-            this.dateTimePickerUniversity.Size = new System.Drawing.Size(232, 26);
-            this.dateTimePickerUniversity.TabIndex = 18;
             // 
             // txtContactUniversity
             // 
@@ -158,6 +151,14 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Nom Université / University Name";
             // 
+            // txtDate
+            // 
+            this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDate.Location = new System.Drawing.Point(82, 136);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(240, 26);
+            this.txtDate.TabIndex = 28;
+            // 
             // FrmUniversityEdit
             // 
             this.AcceptButton = this.btnSave;
@@ -165,11 +166,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(565, 450);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBoxUniversity);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.dateTimePickerUniversity);
             this.Controls.Add(this.txtContactUniversity);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -191,7 +192,6 @@
         private System.Windows.Forms.PictureBox pictureBoxUniversity;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DateTimePicker dateTimePickerUniversity;
         private System.Windows.Forms.TextBox txtContactUniversity;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -199,5 +199,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUniversityName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDate;
     }
 }

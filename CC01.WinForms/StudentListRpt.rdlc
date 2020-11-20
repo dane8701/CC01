@@ -327,7 +327,7 @@
         <Top>2.85433cm</Top>
         <Left>2.81495cm</Left>
         <Height>1.91438cm</Height>
-        <Width>12.24896cm</Width>
+        <Width>12.24895cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -367,6 +367,22 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
+        <Field Name="Born">
+          <DataField>Born</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Contact">
+          <DataField>Contact</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Location">
+          <DataField>Location</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Picture">
+          <DataField>Picture</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
         <Field Name="Reference">
           <DataField>Reference</DataField>
           <rd:TypeName>System.String</rd:TypeName>

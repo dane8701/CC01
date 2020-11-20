@@ -31,12 +31,14 @@ namespace CC01.WinForms
         public FrmStudentEdit(Student student, Action callBack) : this(callBack)
         {
             this.oldStudent = student;
-            txtUniversity.Text = student.University;
-            labelF.Text = student.Firstname;
-            txtLastname.Text = student.Lastname;
-            dateTimePickerStudent.Text = student.Born.ToString();
-            if (student.Picture != null)
-                pictureBoxStudent.Image = Image.FromStream(new MemoryStream(student.Picture));
+            txtUniversity.Text = oldStudent.University;
+            txtFirstname.Text = oldStudent.Firstname;
+            txtLastname.Text = oldStudent.Lastname;
+            txtDate.Text = oldStudent.Born;
+            txtLocationStudent.Text = oldStudent.LocationStudent;
+            txtContactStudent.Text = (oldStudent.Contact).ToString();
+            if (oldStudent.Picture != null)
+                pictureBoxStudent.Image = Image.FromStream(new MemoryStream(int.Parse((oldStudent.Picture).ToString())));
 
         }
 
@@ -60,7 +62,7 @@ namespace CC01.WinForms
                     txtUniversity.Text.ToUpper(),
                     txtFirstname.Text,
                     txtLastname.Text,
-                    dateTimePickerStudent.Value.ToString("MM/DD/YYYY"),
+                    txtDate.Text,
                     txtLocationStudent.Text,
                     long.Parse(txtContactStudent.Text),
                     !string.IsNullOrEmpty(pictureBoxStudent.ImageLocation) ? File.ReadAllBytes(pictureBoxStudent.ImageLocation) : this.oldStudent?.Picture
@@ -90,6 +92,7 @@ namespace CC01.WinForms
                 txtUniversity.Clear();
                 txtLastname.Clear();
                 txtFirstname.Clear();
+                txtDate.Clear();
                 txtContactStudent.Clear();
                 txtLocationStudent.Clear();
 

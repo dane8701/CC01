@@ -16,6 +16,8 @@ namespace CC01.DAL
         private const string FILE_NAME = @"student.json";
         private readonly string dbFolder;
         private FileInfo file;
+        private Student student;
+
         public StudentDAO(string dbFolder)
         {
             this.dbFolder = dbFolder;
@@ -53,6 +55,11 @@ namespace CC01.DAL
                 throw new DuplicateNameException("This product reference already exists !");
             students[oldIndex] = newStudent;
             Save();
+        }
+
+        public Student Get()
+        {
+            return student;
         }
 
         public void Add(Student product)
