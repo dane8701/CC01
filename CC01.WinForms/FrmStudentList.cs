@@ -95,6 +95,8 @@ namespace CC01.WinForms
                 (
                    new EtudiantCartePrint
                    (
+                       p.Firstname,
+                       p.Lastname,
                        p.University,
                        p.Born,
                        p.LocationStudent,

@@ -59,5 +59,12 @@ namespace CC01.WinForms
         {
 
         }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPreview form = new FrmPreview();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
