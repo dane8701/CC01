@@ -90,23 +90,23 @@ namespace CC01.WinForms
             Student student = studentBLO.GetStudent();
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                Student p = dataGridView1.Rows[i].DataBoundItem as Student;
+                Student s = dataGridView1.Rows[i].DataBoundItem as Student;
                 items.Add
                 (
                    new EtudiantCartePrint
                    (
-                       p.Firstname,
-                       p.Lastname,
-                       p.University,
-                       p.Born,
-                       p.LocationStudent,
-                       p.Contact,
-                       !string.IsNullOrEmpty((student?.Picture).ToString()) ? File.ReadAllBytes((student?.Picture).ToString()) : null
+                       s.Firstname,
+                       s.Lastname,
+                       s.University,
+                       s.Born,
+                       s.LocationStudent,
+                       s.Contact,
+                       !string.IsNullOrEmpty(student?.Logo) ? File.ReadAllBytes(student?.Logo) : null
                     )
                 );
             }
-            /*Form f = new FrmPreview("EtudiantCartePrint.rdlc", items);
-            f.Show();*/
+            Form f = new FrmPreview("EtudiantCartePrint.rdlc", items);
+            f.Show();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

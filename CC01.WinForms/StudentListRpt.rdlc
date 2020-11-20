@@ -11,7 +11,7 @@
               <TextRun>
                 <Value> Carte Etudiant</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>16pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -23,13 +23,14 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.3937cm</Top>
-        <Left>1.21391cm</Left>
+        <Left>0.9506cm</Left>
         <Height>0.94396cm</Height>
-        <Width>15.62333cm</Width>
+        <Width>15.88665cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+          <VerticalAlign>Middle</VerticalAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>

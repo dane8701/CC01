@@ -38,7 +38,7 @@ namespace CC01.WinForms
             txtLocationStudent.Text = oldStudent.LocationStudent;
             txtContactStudent.Text = (oldStudent.Contact).ToString();
             if (oldStudent.Picture != null)
-                pictureBoxStudent.Image = Image.FromStream(new MemoryStream(oldStudent.Picture));
+                pictureBoxStudent.Image = Image.FromStream(new MemoryStream(student.Picture));
 
         }
 

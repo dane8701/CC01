@@ -26,7 +26,7 @@ namespace CC01.BO
         public int cmp =  0;
 
         public string Reference;
-
+        public string Logo { get; set; }
         public Student()//serialisation
         {
         }
@@ -42,7 +42,10 @@ namespace CC01.BO
             Picture = picture;
             cmp++;
             Reference = "R" + cmp.ToString();
+            Logo = picture.ToString();
         }
+
+        
 
         public override bool Equals(object obj)
         {
