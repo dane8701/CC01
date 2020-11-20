@@ -57,6 +57,7 @@ namespace CC01.WinForms
         {
             try
             {
+
                 Student newStudent = new Student
                 (
                     txtUniversity.Text.ToUpper(),

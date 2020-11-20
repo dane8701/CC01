@@ -46,8 +46,6 @@ namespace CC01.DAL
         public void Add(University university)
         {
             var index = universitys.IndexOf(university);
-            if (index >= 0)
-                throw new DuplicateNameException("This product reference already exists !");
             universitys.Add(university);
             Save();
         }
@@ -66,10 +64,6 @@ namespace CC01.DAL
         {
             var oldIndex = universitys.IndexOf(oldUniversity);
             var newIndex = universitys.IndexOf(newUniversity);
-            if (oldIndex < 0)
-                throw new KeyNotFoundException("The product doesn't exists !");
-            if (newIndex >= 0 && oldIndex != newIndex)
-                throw new DuplicateNameException("This product reference already exists !");
             universitys[oldIndex] = newUniversity;
             Save();
         }

@@ -134,5 +134,10 @@ namespace CC01.WinForms
         {
             loadData();
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEdit_Click(sender, e);
+        }
     }
 }
