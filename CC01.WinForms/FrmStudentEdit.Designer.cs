@@ -199,7 +199,7 @@
             this.txtDate.Location = new System.Drawing.Point(169, 221);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(169, 26);
-            this.txtDate.TabIndex = 13;
+            this.txtDate.TabIndex = 3;
             // 
             // FrmStudentEdit
             // 

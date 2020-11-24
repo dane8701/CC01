@@ -72,7 +72,7 @@
             this.btnCancel.Location = new System.Drawing.Point(288, 312);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(265, 88);
-            this.btnCancel.TabIndex = 22;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -83,7 +83,7 @@
             this.btnSave.Location = new System.Drawing.Point(17, 312);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(265, 88);
-            this.btnSave.TabIndex = 24;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -94,7 +94,7 @@
             this.txtContactUniversity.Location = new System.Drawing.Point(90, 245);
             this.txtContactUniversity.Name = "txtContactUniversity";
             this.txtContactUniversity.Size = new System.Drawing.Size(232, 26);
-            this.txtContactUniversity.TabIndex = 21;
+            this.txtContactUniversity.TabIndex = 3;
             // 
             // label5
             // 
@@ -122,7 +122,7 @@
             this.txtLocationUniversity.Location = new System.Drawing.Point(90, 191);
             this.txtLocationUniversity.Name = "txtLocationUniversity";
             this.txtLocationUniversity.Size = new System.Drawing.Size(232, 26);
-            this.txtLocationUniversity.TabIndex = 19;
+            this.txtLocationUniversity.TabIndex = 2;
             // 
             // label3
             // 
@@ -140,7 +140,7 @@
             this.txtUniversityName.Location = new System.Drawing.Point(16, 79);
             this.txtUniversityName.Name = "txtUniversityName";
             this.txtUniversityName.Size = new System.Drawing.Size(306, 26);
-            this.txtUniversityName.TabIndex = 15;
+            this.txtUniversityName.TabIndex = 0;
             // 
             // label1
             // 
@@ -158,7 +158,7 @@
             this.txtDate.Location = new System.Drawing.Point(82, 136);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(240, 26);
-            this.txtDate.TabIndex = 28;
+            this.txtDate.TabIndex = 1;
             // 
             // FrmUniversityEdit
             // 
